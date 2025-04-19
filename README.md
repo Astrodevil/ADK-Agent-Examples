@@ -1,6 +1,6 @@
 # ADK Agent Demos
 
-This repository contains various agent demos built with Google's ADK (Agent Development Kit).
+This repository contains various agent demos built with Google's [ADK (Agent Development Kit)](https://google.github.io/adk-docs/).
 
 ## Projects
 
@@ -36,22 +36,27 @@ A simple agent that:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/ADK2.git
-cd ADK2
+git clone https://github.com/Astrodevil/Agent-Cookbook.git
+cd Agent-Cookbook
 ```
 
-2. Create and activate a virtual environment:
+2. Install ADK:
+```bash
+pip install google-adk
+```
+
+3. Create and activate a virtual environment:
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 ```
 
-3. Install dependencies:
+4. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Set up your environment variables for the agent you want to run:
+5. Set up your environment variables for the agent you want to run:
 ```bash
 # For analyzer agent
 cp analyzer_agent/.env.example analyzer_agent/.env
@@ -69,7 +74,24 @@ Then edit the `.env` files to include your API keys.
 
 ## Usage
 
-To run each agent:
+### Running Agents with ADK CLI
+
+ADK provides multiple ways to run and interact with your agents:
+
+```bash
+# Dev UI
+adk web
+
+# Terminal
+adk run analyzer_agent
+
+# API Server (creates a local FastAPI server for testing)
+adk api_server
+```
+
+### Running Agents Directly
+
+You can also run each agent directly:
 
 ```bash
 # Analyzer Agent
@@ -94,7 +116,7 @@ python agent.py
 You'll need to set up accounts and obtain API keys for:
 - [Nebius AI](https://studio.nebius.ai/) - For LLM inference (required for all agents)
 - [Exa](https://exa.ai/) - For AI news search (required for analyzer, sequential, and multi-tool agents)
-- [Tavily](https://tavily.ai/) - For search (required for analyzer and sequential agents)
+- [Tavily](https://tavily.com/) - For search (required for analyzer and sequential agents)
 - [Firecrawl](https://firecrawl.dev/) - For web scraping (required for analyzer agent)
 - [Resend](https://resend.com/) - For email functionality (required for email agent)
 

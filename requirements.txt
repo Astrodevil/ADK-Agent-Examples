@@ -1,8 +1,8 @@
-google-adk>=0.6.0
-litellm>=1.20.0
-exa-py>=1.0.0
-tavily-python>=0.2.2
-firecrawl>=1.0.0
-python-dotenv>=1.0.0
-google-genai>=0.1.0
-resend>=0.6.0 
+google-adk
+litellm
+exa-py
+tavily-python
+firecrawl
+python-dotenv
+google-genai
+resend 
