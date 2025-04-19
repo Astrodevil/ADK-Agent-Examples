@@ -1,0 +1,7 @@
+google-adk
+litellm>=1.20.0
+exa-py>=1.0.0
+tavily-python>=0.2.2
+firecrawl>=1.0.0
+python-dotenv>=1.0.0
+google-genai>=0.1.0 
