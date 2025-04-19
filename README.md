@@ -2,6 +2,15 @@
 
 This repository contains various agent demos built with Google's [ADK (Agent Development Kit)](https://google.github.io/adk-docs/), showcasing different patterns and capabilities for building AI agents.
 
+## LLM Integration
+
+All demos in this repository are powered by [Nebius AI](https://studio.nebius.ai/) using open-source LLMs:
+
+- **Meta-Llama-3.1-8B-Instruct** - Used in most agent implementations
+- **Llama-3_1-Nemotron-Ultra-253B** - Used for advanced analysis in the Analyzer Agent
+
+These models are integrated via [LiteLLM](https://github.com/BerriAI/litellm), which ADK supports for connecting to various model providers. This approach showcases how ADK can work seamlessly with open models while maintaining a consistent interface.
+
 ## Projects
 
 ### Analyzer Agent (AI Trends Analysis Pipeline)
