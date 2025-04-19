@@ -4,63 +4,33 @@ This repository contains various agent demos built with Google's [ADK (Agent Dev
 
 ## LLM Integration
 
-All demos in this repository are powered by [Nebius AI](https://studio.nebius.ai/) using open-source LLMs:
+All demos in this repository are powered by [Nebius AI](https://dub.sh/AIStudio) using open-source LLMs:
 
 - **Meta-Llama-3.1-8B-Instruct** - Used in most agent implementations
 - **Llama-3_1-Nemotron-Ultra-253B** - Used for advanced analysis in the Analyzer Agent
 
-These models are integrated via [LiteLLM](https://github.com/BerriAI/litellm), which ADK supports for connecting to various model providers. This approach showcases how ADK can work seamlessly with open models while maintaining a consistent interface.
+These models are integrated via [LiteLLM](https://github.com/BerriAI/litellm), which ADK supports for connecting to various model providers.
 
-## Projects
+## Agent Demos
 
-### Analyzer Agent (AI Trends Analysis Pipeline)
+| Agent | Pattern | Description | Details |
+|-------|---------|-------------|---------|
+| [Analyzer Agent](./analyzer_agent/) | 5-agent sequential pipeline | AI trends analysis with multiple data sources | [README](./analyzer_agent/README.md) |
+| [Email Agent](./email_adk_agent/) | Single agent with tool | Email integration with Resend API | [README](./email_adk_agent/README.md) |
+| [Sequential Agent](./seq_adk_agent/) | 3-agent sequential pipeline | News aggregator combining IPL and AI news | [README](./seq_adk_agent/README.md) |
+| [Multi-Tool Search](./multi_tool_search_agent/) | Root agent with delegation | Modular search with agent delegation | [README](./multi_tool_search_agent/README.md) |
 
-A comprehensive AI analysis pipeline that:
-- Fetches the latest AI news from Twitter/X using Exa search
-- Retrieves AI benchmarks and analysis using Tavily search
-- Scrapes and processes data from Nebius AI Studio using Firecrawl
-- Synthesizes and structures this information into a comprehensive analysis
-- Analyzes AI trends and provides specific Nebius model recommendations
+For detailed information about each agent, please refer to the individual READMEs in their respective directories.
 
-**Technical Pattern:** Uses a 5-agent sequential pipeline with specialized agents for different data sources, summary generation, and in-depth analysis.
+## Implementation Patterns Demonstrated
 
-### Email Agent (Communication Demo)
+This repository demonstrates several important ADK patterns:
 
-A simple agent demonstrating email integration:
-- Uses Resend API for sending emails
-- Shows how to structure and format email content
-- Demonstrates integration of external APIs with ADK agents
-- Provides a foundation for building notification systems
-
-**Technical Pattern:** Single agent with a specialized tool for email communication.
-
-### Sequential Agent (News Aggregator)
-
-A news aggregation agent that:
-- Chains multiple search tools in sequence
-- Uses Exa to gather IPL cricket news from April 2025
-- Uses Tavily to collect AI news from Hacker News
-- Combines and formats results into a structured, engaging summary
-
-**Technical Pattern:** 3-agent sequential pipeline with aggregation of multiple data sources and summarization.
-
-### Multi-Tool Search Agent (Web Search Demo)
-
-A modular search implementation that:
-- Demonstrates ADK's agent delegation pattern
-- Uses Exa search to perform flexible web searches
-- Implements a root agent architecture for task orchestration
-- Shows how to process and structure search results
-
-**Technical Pattern:** Uses a root agent with sub-agent delegation pattern.
-
-## Key Differences Between Sequential Agents
-
-This repository contains two different sequential agent implementations that serve different purposes:
-
-1. **Analyzer Agent:** A complex 5-agent pipeline focused on AI trend analysis with multiple data sources and deep analysis.
-
-2. **Sequential Agent:** A simpler 3-agent pipeline focused on news aggregation from different topics (IPL cricket and AI news).
+1. **Sequential Agent Chaining** - Multiple agents executing in sequence, with outputs becoming inputs for the next agent.
+2. **Tool Integration** - Using external APIs and services as tools within agents.
+3. **Agent Delegation** - A root agent delegating tasks to specialized sub-agents.
+4. **Multi-Model Approach** - Using different LLM models for different tasks based on capabilities.
+5. **Specialized Agents** - Agents designed for specific tasks like search, summary, analysis, etc.
 
 ## Setup
 
@@ -88,25 +58,14 @@ pip install -r requirements.txt
 
 5. Set up your environment variables for the agent you want to run:
 ```bash
-# For analyzer agent
+# Example for analyzer agent
 cp analyzer_agent/.env.example analyzer_agent/.env
-
-# For email agent
-cp email_adk_agent/.env.example email_adk_agent/.env
-
-# For sequential agent
-cp seq_adk_agent/.env.example seq_adk_agent/.env
-
-# For multi-tool search agent
-cp multi_tool_search_agent/.env.example multi_tool_search_agent/.env
 ```
-Then edit the `.env` files to include your API keys.
+Then edit the `.env` file to include your API keys.
 
 ## Usage
 
 ### Running Agents with ADK CLI
-
-ADK provides multiple ways to run and interact with your agents:
 
 ```bash
 # Dev UI - Visual interface for testing and debugging agents
@@ -114,57 +73,24 @@ adk web
 
 # Terminal - Run agents directly in the terminal
 adk run analyzer_agent
-adk run email_adk_agent
-adk run seq_adk_agent
-adk run multi_tool_search_agent
 
 # API Server - Create a local FastAPI server for API testing
 adk api_server
 ```
 
-### Running Agents Directly
-
-You can also run each agent with Python directly:
-
-```bash
-# Analyzer Agent
-cd analyzer_agent
-python agent.py
-
-# Email Agent
-cd email_adk_agent
-python agent.py
-
-# Sequential Agent
-cd seq_adk_agent
-python agent.py
-
-# Multi-Tool Search Agent
-cd multi_tool_search_agent
-python agent.py
-```
-
-## API Keys Required
+### API Keys Required
 
 You'll need to set up accounts and obtain API keys for:
 
 | Service | Purpose | Required For |
 |---------|---------|--------------|
-| [Nebius AI](https://studio.nebius.ai/) | LLM inference | All agents |
-| [Exa](https://exa.ai/) | AI & news search | Analyzer, Sequential, Multi-Tool agents |
-| [Tavily](https://tavily.com/) | Specialized search | Analyzer and Sequential agents |
-| [Firecrawl](https://firecrawl.dev/) | Web scraping | Analyzer agent only |
-| [Resend](https://resend.com/) | Email sending | Email agent only |
+| [Nebius AI](https://dub.sh/AIStudio) | LLM inference | All agents |
+| [Exa](https://exa.ai/) | Web search | Most agents |
+| [Tavily](https://tavily.com/) | Specialized search | Some agents |
+| [Firecrawl](https://firecrawl.dev/) | Web scraping | Analyzer agent |
+| [Resend](https://resend.com/) | Email sending | Email agent |
 
-## Implementation Patterns Demonstrated
-
-This repository demonstrates several important ADK patterns:
-
-1. **Sequential Agent Chaining** - Multiple agents executing in sequence, with each agent's output becoming input for the next.
-2. **Tool Integration** - Using external APIs and services as tools within agents.
-3. **Agent Delegation** - A root agent delegating tasks to specialized sub-agents.
-4. **Multi-Model Approach** - Using different LLM models for different tasks based on capabilities.
-5. **Specialized Agents** - Agents designed for specific tasks like search, summary, analysis, etc.
+See each agent's README for specific requirements.
 
 ## Contributing
 
