@@ -33,12 +33,11 @@ RESEND_API_KEY="your_resend_api_key_here"
 
 Run with ADK CLI:
 ```bash
+# Terminal - Run directly in the terminal
 adk run email_adk_agent
-```
 
-Run directly:
-```bash
-python agent.py
+# Dev UI - Visual interface for testing and debugging
+adk web
 ```
 
 ## Required API Keys

@@ -73,6 +73,9 @@ adk web
 
 # Terminal - Run agents directly in the terminal
 adk run analyzer_agent
+adk run email_adk_agent
+adk run seq_adk_agent
+adk run multi_tool_search_agent
 
 # API Server - Create a local FastAPI server for API testing
 adk api_server
