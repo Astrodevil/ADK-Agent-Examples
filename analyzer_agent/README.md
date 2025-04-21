@@ -1,6 +1,6 @@
 # Analyzer Agent (AI Trends Analysis Pipeline)
 
-A comprehensive AI analysis pipeline that analyzes AI news, benchmarks, and trends.
+A comprehensive AI analysis pipeline that analyzes AI news, benchmarks, and trends. Full explainer video is available on [YouTube](https://www.youtube.com/watch?v=FYhKah8FpAg)
 
 ## Overview
 
