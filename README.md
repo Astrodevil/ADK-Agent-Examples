@@ -1,4 +1,7 @@
 # ADK Agent Demos
+![Orange Bold Aesthetic Reading Vlog Youtube Thumbnail-4](https://github.com/user-attachments/assets/817c1477-8735-4341-be37-264b484fd334)
+
+Full explainer video is available on [YouTube](https://www.youtube.com/watch?v=FYhKah8FpAg)
 
 This repository contains various agent demos built with Google's [ADK (Agent Development Kit)](https://google.github.io/adk-docs/), showcasing different patterns and capabilities for building AI agents.
 
