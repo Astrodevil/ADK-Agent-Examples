@@ -92,7 +92,7 @@ exa_agent = LlmAgent(
        Prefix your response with "**🔥ExaAgent:**" to clearly identify your output.
        """,
     tools=[exa_search_ai],
-    output_key="exa_news"
+    output_key="exa_results"
 )
 
 # --- Agent 2: Tavily AI Analysis ---
@@ -105,7 +105,7 @@ tavily_agent = LlmAgent(
     Prefix your response with "**🐳TavilyAgent:**" to clearly identify your output.
     """,
     tools=[tavily_search_ai_analysis],
-    output_key="tavily_news"
+    output_key="tavily_results"
 )
 
 # --- Agent 3: Summary & Formatting ---
