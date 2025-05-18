@@ -39,7 +39,7 @@ This repository demonstrates several important ADK patterns:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Astrodevil/Agent-Cookbook.git
+git clone https://github.com/Astrodevil/ADK-Agent-Examples.git
 cd Agent-Cookbook
 ```
 
