@@ -23,6 +23,7 @@ These models are integrated via [LiteLLM](https://github.com/BerriAI/litellm), w
 | [Email Agent](./email_adk_agent/) | Single agent with tool | Email integration with Resend API | [README](./email_adk_agent/README.md) |
 | [Sequential Agent](./seq_adk_agent/) | 3-agent sequential pipeline | News aggregator combining IPL and AI news | [README](./seq_adk_agent/README.md) |
 | [Multi-Tool Search](./multi_tool_search_agent/) | Root agent with delegation | Modular search with agent delegation | [README](./multi_tool_search_agent/README.md) |
+| [Job Finder](./jobfinder_agent/) | 4-agent sequential pipeline | Resume analysis and job matching | [README](./jobfinder_agent/README.md) |
 
 For detailed information about each agent, please refer to the individual READMEs in their respective directories.
 
@@ -80,6 +81,7 @@ adk run analyzer_agent
 adk run email_adk_agent
 adk run seq_adk_agent
 adk run multi_tool_search_agent
+adk run jobfinder_agent
 
 # API Server - Create a local FastAPI server for API testing
 adk api_server
@@ -96,6 +98,8 @@ You'll need to set up accounts and obtain API keys for:
 | [Tavily](https://tavily.com/) | Specialized search | Some agents |
 | [Firecrawl](https://firecrawl.dev/) | Web scraping | Analyzer agent |
 | [Resend](https://resend.com/) | Email sending | Email agent |
+| [Mistral AI](https://mistral.ai) | OCR processing | Job Finder agent |
+| [Linkup](https://www.linkup.so/) | Job search | Job Finder agent |
 
 See each agent's README for specific requirements.
 
