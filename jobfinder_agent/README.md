@@ -1,6 +1,7 @@
 # Resume Analyzer & Job Finder Agent
 
-An AI-powered pipeline that analyzes resumes and finds relevant job listings.
+An AI-powered pipeline that analyzes resumes and finds relevant job listings. Full explainer video is available on [YouTube](https://www.youtube.com/watch?v=ji_hECcyTjs)
+
 
 
 ## Overview
