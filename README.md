@@ -3,7 +3,7 @@
 
 Full explainer video is available on [YouTube](https://www.youtube.com/watch?v=FYhKah8FpAg). Read detailed blog [here](https://dev.to/astrodevil/i-built-a-team-of-5-agents-using-google-adk-meta-llama-and-nemotron-ultra-253b-ec3)
 
-This repository contains various agent demos built with Google's [ADK (Agent Development Kit)](https://google.github.io/adk-docs/), showcasing different patterns and capabilities for building AI agents.
+This repository contains various agent demos built with Google's [ADK (Agent Development Kit)](https://google.github.io/adk-docs/), showcasing different patterns and capabilities for building AI agents. ADK is a flexible and modular framework that makes agent development feel more like software development. While optimized for Gemini and the Google ecosystem, it's model-agnostic, deployment-agnostic, and compatible with other frameworks. ADK enables developers to create, deploy, and orchestrate agentic architectures ranging from simple tasks to complex workflows, with features like multi-agent pipelines, tool integration, and sequential processing.
 
 ## LLM Integration
 
