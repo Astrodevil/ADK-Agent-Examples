@@ -1,7 +1,8 @@
-# ADK Agent Demos
-![Orange Bold Aesthetic Reading Vlog Youtube Thumbnail-4](https://github.com/user-attachments/assets/817c1477-8735-4341-be37-264b484fd334)
+# ADK Agent Examples
+![Orange Bold Aesthetic Reading Vlog Youtube Thumbnail-5](https://github.com/user-attachments/assets/e9194114-c92e-4115-8f49-843976629ecf)
 
-Full explainer video is available on [YouTube](https://www.youtube.com/watch?v=FYhKah8FpAg). Read detailed blog [here](https://dev.to/astrodevil/i-built-a-team-of-5-agents-using-google-adk-meta-llama-and-nemotron-ultra-253b-ec3)
+
+Full explainer video is available on YouTube - [Analyzer Agent + ADK Intro](https://www.youtube.com/watch?v=FYhKah8FpAg). Read detailed blog [here](https://dev.to/astrodevil/i-built-a-team-of-5-agents-using-google-adk-meta-llama-and-nemotron-ultra-253b-ec3)
 
 This repository contains various agent demos built with Google's [ADK (Agent Development Kit)](https://google.github.io/adk-docs/), showcasing different patterns and capabilities for building AI agents. ADK is a flexible and modular framework that makes agent development feel more like software development. While optimized for Gemini and the Google ecosystem, it's model-agnostic, deployment-agnostic, and compatible with other frameworks. ADK enables developers to create, deploy, and orchestrate agentic architectures ranging from simple tasks to complex workflows, with features like multi-agent pipelines, tool integration, and sequential processing.
 

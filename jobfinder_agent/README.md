@@ -1,6 +1,7 @@
 # Resume Analyzer & Job Finder Agent
 
-An AI-powered pipeline that analyzes resumes and finds relevant job listings.
+An AI-powered pipeline that analyzes resumes and finds relevant job listings. Full explainer video is available on [YouTube](https://www.youtube.com/watch?v=ji_hECcyTjs)
+
 
 
 ## Overview
@@ -37,6 +38,6 @@ LINKUP_API_KEY="your_linkup_api_key_here"
 
 ## Required API Keys
 
-- [Nebius AI](https://studio.nebius.ai) - For LLM inference (Qwen3-14B).
+- [Nebius AI](https://dub.sh/AIStudio) - For LLM inference (Qwen3-14B).
 - [Mistral AI](https://mistral.ai) - For OCR processing.
 - [Linkup](https://www.linkup.so/) - For job search.
