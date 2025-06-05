@@ -2,7 +2,7 @@
 ![Orange Bold Aesthetic Reading Vlog Youtube Thumbnail-5](https://github.com/user-attachments/assets/e9194114-c92e-4115-8f49-843976629ecf)
 
 
-Full explainer video is available on YouTube - [Analyzer Agent + ADK Intro](https://www.youtube.com/watch?v=FYhKah8FpAg), [Job Finder Agent(MistralOCR + Qwen3)](https://youtu.be/ji_hECcyTjs?si=l25jghg1wAgIc8_1). Read detailed blog [here](https://dev.to/astrodevil/i-built-a-team-of-5-agents-using-google-adk-meta-llama-and-nemotron-ultra-253b-ec3)
+Full explainer video is available on YouTube - [Analyzer Agent + ADK Intro](https://www.youtube.com/watch?v=FYhKah8FpAg), [Job Finder Agent(MistralOCR + Qwen3)](https://youtu.be/ji_hECcyTjs?si=l25jghg1wAgIc8_1). Read detailed [blog 1](https://dev.to/astrodevil/i-built-a-team-of-5-agents-using-google-adk-meta-llama-and-nemotron-ultra-253b-ec3) and [blog 2](https://medium.com/data-science-collective/i-tested-deepseek-r1-0528-built-a-job-finding-agent-with-adk-nebius-ai-linkup-76e6e62bdbba?sk=fa84bd0038671f6988e58368e14f2233)
 
 This repository contains various agent demos built with Google's [ADK (Agent Development Kit)](https://google.github.io/adk-docs/), showcasing different patterns and capabilities for building AI agents. ADK is a flexible and modular framework that makes agent development feel more like software development. While optimized for Gemini and the Google ecosystem, it's model-agnostic, deployment-agnostic, and compatible with other frameworks. ADK enables developers to create, deploy, and orchestrate agentic architectures ranging from simple tasks to complex workflows, with features like multi-agent pipelines, tool integration, and sequential processing.
 
