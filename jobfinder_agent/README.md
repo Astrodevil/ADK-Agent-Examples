@@ -1,6 +1,6 @@
 # Resume Analyzer & Job Finder Agent
 
-An AI-powered pipeline that analyzes resumes and finds relevant job listings. Full explainer video is available on [YouTube](https://www.youtube.com/watch?v=ji_hECcyTjs)
+An AI-powered pipeline that analyzes resumes and finds relevant job listings. Full explainer video is available on [YouTube](https://www.youtube.com/watch?v=ji_hECcyTjs) along with a detailed [article](https://astrodevil.medium.com/i-tested-deepseek-r1-0528-built-a-job-finding-agent-with-adk-nebius-ai-linkup-76e6e62bdbba).
 
 
 
