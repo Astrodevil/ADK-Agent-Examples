@@ -1,8 +1,0 @@
-google-adk
-litellm
-exa-py
-tavily-python
-firecrawl
-python-dotenv
-google-genai
-resend 
