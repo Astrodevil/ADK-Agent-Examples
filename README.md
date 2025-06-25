@@ -64,34 +64,10 @@ pip install -r requirements.txt
 
 5. Set up your environment variables for the agent you want to run:
 ```bash
-# For Analyzer Agent
+# Example for analyzer agent
 cp analyzer_agent/.env.example analyzer_agent/.env
-# For Email Agent
-cp email_adk_agent/.env.example email_adk_agent/.env
 ```
-Then edit the respective `.env` file to include your API keys.
-
-### Agent-Specific Setup
-
-#### Analyzer Agent
-```bash
-# Install additional dependencies for Analyzer Agent
-pip install -r analyzer_agent/requirements.txt
-
-# Set up environment variables
-cp analyzer_agent/.env.example analyzer_agent/.env
-# Edit analyzer_agent/.env with your API keys
-```
-
-#### Email Agent
-```bash
-# Install additional dependencies for Email Agent
-pip install -r email_adk_agent/requirements.txt
-
-# Set up environment variables
-cp email_adk_agent/.env.example email_adk_agent/.env
-# Edit email_adk_agent/.env with your API keys
-```
+Then edit the `.env` file to include your API keys.
 
 ## Usage
 
