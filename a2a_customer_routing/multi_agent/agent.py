@@ -33,8 +33,9 @@ from a2a.client import A2AClient
 # LlamaIndex imports for knowledge base functionality
 from llama_index.core import Document, VectorStoreIndex
 from llama_index.core.node_parser import SentenceSplitter
-from llama_index.embeddings.litellm import LiteLLMEmbedding
-from llama_index.llms.litellm import LiteLLM as LlamaIndexLiteLLM_LLM
+
+from llama_index.embeddings.nebius import NebiusEmbedding
+from llama_index.llms.nebius import NebiusLLM
 
 # Google ADK imports for agent creation
 from google.adk.agents import LlmAgent
@@ -58,7 +59,7 @@ class KB:
     def __init__(self):
         # Load knowledge base from JSON file
         try:
-            path = Path("a2a_customer_routing/knowledge_base/swiftcart_kb.json")
+            path = Path("/Users/arindammajumder/Developer/Python/ADK-Agent-Examples/a2a_customer_routing/knowledge_base/swiftcart_kb.json") #TODO: Change this to the correct path / Improve the path handling
             data = json.loads(path.read_text())
         except FileNotFoundError:
             logger.error("knowledge_base/swiftcart_kb.json not found. Please create it.")
@@ -83,16 +84,14 @@ class KB:
         # Split documents into chunks for better retrieval
         nodes = SentenceSplitter(chunk_size=512, chunk_overlap=20).get_nodes_from_documents(docs)
 
-        # Get API credentials for LLM services
-        api_base = os.getenv("NEBIUS_API_BASE")
+
         api_key = os.getenv("NEBIUS_API_KEY")
 
         # Create vector index for semantic search
         self.index = VectorStoreIndex(
             nodes,
-            embed_model=LiteLLMEmbedding(
-                model_name="nebius/BAAI/bge-multilingual-gemma2",
-                api_base=api_base,
+            embed_model=NebiusEmbedding(
+                model_name="BAAI/bge-multilingual-gemma2",
                 api_key=api_key
             )
         )
@@ -101,9 +100,8 @@ class KB:
         self.query_engine = self.index.as_query_engine(
             response_mode="tree_summarize",
             similarity_top_k=3,
-            llm=LlamaIndexLiteLLM_LLM(
-                model="nebius/meta-llama/Meta-Llama-3.1-8B-Instruct",
-                api_base=api_base,
+            llm=NebiusLLM(
+                model="meta-llama/Meta-Llama-3.1-8B-Instruct",
                 api_key=api_key
             )
         )
@@ -148,7 +146,6 @@ Sentiment:""" % message.strip()
     resp = completion(
         model="nebius/meta-llama/Meta-Llama-3.1-8B-Instruct",
         messages=[{"role": "user", "content": prompt}],
-        api_base=os.getenv("NEBIUS_API_BASE"),
         api_key=os.getenv("NEBIUS_API_KEY"),
         max_tokens=10,
         temperature=0.1
@@ -178,9 +175,8 @@ def escalate_fn(message: str) -> str:
 # Create LLM models for different agents
 def create_llm_model(model_name: str, name: str):
     """Factory function to create LLM models with consistent configuration."""
-    api_base = os.getenv("NEBIUS_API_BASE")
     api_key = os.getenv("NEBIUS_API_KEY")
-    return LiteLlm(model=model_name, api_base=api_base, api_key=api_key, temprature=0.1)
+    return LiteLlm(model=model_name, api_key=api_key, temprature=0.1) #TODO: Check the `temprature` Ig, it's not correct
 
 # Initialize LLM models
 llama_8b = create_llm_model("nebius/meta-llama/Meta-Llama-3.1-8B-Instruct", "Llama 8B")
