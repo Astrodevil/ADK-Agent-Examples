@@ -53,7 +53,7 @@ class KB:
         api_key = os.getenv("NEBIUS_API_KEY")
 
         self.index = VectorStoreIndex(
-            nodes, embed_model=NebiusEmbedding(model_name="BAAI/bge-multilingual-gemma2", api_key=api_key)
+            nodes, embed_model=NebiusEmbedding(model_name="Qwen/Qwen3-Embedding-8B", api_key=api_key)
         )
         self.query_engine = self.index.as_query_engine(
             response_mode="tree_summarize", similarity_top_k=3,

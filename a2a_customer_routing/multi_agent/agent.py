@@ -37,7 +37,7 @@ def create_llm_model(model_name: str):
     return LiteLlm(model=model_name, api_key=api_key, temperature=0.1)
 
 llama_8b = create_llm_model("nebius/meta-llama/Meta-Llama-3.1-8B-Instruct")
-qwen = create_llm_model("nebius/Qwen/Qwen3-235B-A22B")
+qwen = create_llm_model("nebius/Qwen/Qwen3-30B-A3B")
 
 intake_agent = LlmAgent(name="intake_agent", model=llama_8b, description="Classifies sentiment", instruction="Use the classify_fn tool. Return ONLY the classification result (positive, neutral, or negative).", tools=[classify_fn])
 resolution_agent = LlmAgent(name="resolution_agent", model=qwen, description="Answers questions from a KB", instruction="Use resolve_query_fn. If the tool returns 'KB_ANSWER:', return only the text after it. Otherwise, say you don't have information.", tools=[resolve_query_fn])
