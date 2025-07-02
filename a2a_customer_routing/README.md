@@ -20,6 +20,12 @@ User Message → Coordinator Agent → Sentiment Analysis → Routing Decision
                                              Final Response to User
 ```
 
+## Demo
+
+![Customer Support Demo](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExenV4a3ViM29zeXF6cTgwbHU0NHdwaXhlM2s3NWM2N2JjaTk5cHBrbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QYH53ZP7ObQyk7kNbu/giphy.gif)
+
+*Streamlit interface for customer query routing and resolution*
+
 ## Agent Overview
 
 | Agent | Port | Purpose | Technology |
