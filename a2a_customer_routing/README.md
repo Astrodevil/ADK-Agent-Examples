@@ -20,23 +20,48 @@ User Message → Coordinator Agent → Sentiment Analysis → Routing Decision
                                              Final Response to User
 ```
 
+## Demo
+
+![Customer Support Demo](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExenV4a3ViM29zeXF6cTgwbHU0NHdwaXhlM2s3NWM2N2JjaTk5cHBrbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QYH53ZP7ObQyk7kNbu/giphy.gif)
+
+*Streamlit interface for customer query routing and resolution*
+
 ## Agent Overview
 
 | Agent | Port | Purpose | Technology |
 |-------|------|---------|------------|
 | **Coordinator** | 10023 | Orchestrates workflow and routing | Llama 3.1 8B |
 | **Intake** | 10020 | Sentiment analysis (positive/neutral/negative) | Llama 3.1 8B |
-| **Resolution** | 10021 | Knowledge base search and answers | Qwen 235B |
+| **Resolution** | 10021 | Knowledge base search and answers | Qwen3-30B-A3B |
 | **Escalation** | 10022 | Human support escalation | Llama 3.1 8B |
+
 
 ## Features
 
 - **Intelligent Routing**: Automatic sentiment-based message routing
 - **Knowledge Base Integration**: Semantic search through FAQ database
 - **Human Escalation**: Automatic escalation for negative sentiment cases
-- **Distributed Architecture**: Each agent runs independently via A2A protocol
-- **Scalable Design**: Easy to add new agents or modify existing ones
 - **Interactive UI**: Streamlit-based web interface for easy interaction
+
+## Technology Stack & Integrations
+
+### A2A (Agent-to-Agent) Protocol
+The system leverages the [A2A protocol](https://github.com/a2aproject/A2A) to enable communication between distributed agents. Each agent operates independently while maintaining coordinated workflows through standardized message passing.
+
+### Google ADK (Agent Development Kit) Integration
+[Google's ADK](https://google.github.io/adk-docs/) is used to build the intelligent agents (Coordinator, Intake, and Escalation) in this system.
+
+### Nebius AI Studio
+[Nebius AI Studio](https://studio.nebius.com/) the underlying AI model infrastructure for all agents in the system
+- **Integration Methods**:
+  - **ADK Pipeline**: Uses LiteLLM integration to connect Google ADK agents to Nebius models
+  - **[LlamaIndex](https://www.llamaindex.ai/)  Pipeline**: Direct integration for knowledge base operations and semantic search capabilities
+- **Models Used via Nebius AI API**:
+  - **Llama 3.1 8B**: Powers the Coordinator, Intake, and Escalation agents for sentiment analysis and workflow orchestration
+  - **Qwen/Qwen3-30B-A3B**: Handles knowledge base query resolution and complex question answering in the Resolution agent
+  - **Qwen/Qwen3-Embedding-8B**: Generates semantic embeddings for document indexing and similarity search
+
+
 
 ## Prerequisites
 
@@ -133,3 +158,4 @@ Response: "I understand your frustration. A human agent will contact you shortly
 2. Open the Streamlit interface in your browser
 3. Enter customer queries to see the intelligent routing in action
 4. Monitor the console output to see agent-to-agent communication
+
