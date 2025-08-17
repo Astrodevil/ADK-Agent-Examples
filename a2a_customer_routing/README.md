@@ -90,7 +90,7 @@ a2a_customer_routing/
 1. **Clone the repository**
    ```bash
    git clone https://github.com/Astrodevil/ADK-Agent-Examples.git
-   cd ADK-Agent-Examples/a2a_customer_routing
+   cd ADK-Agent-Examples
    ```
 
 2. **Install dependencies**
