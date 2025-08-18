@@ -143,7 +143,6 @@ Response: "I understand your frustration. A human agent will contact you shortly
 ### Core Classes
 
 - **`KB`**: Knowledge base management with LlamaIndex integration
-- **`ADKAgentExecutor`**: Wrapper for Google ADK agents to work with A2A protocol
 - **`A2AToolClient`**: Client for agent-to-agent communication
 
 ### Agent Tools
