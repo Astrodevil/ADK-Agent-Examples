@@ -6,6 +6,8 @@ import uvicorn
 import requests
 from . import agent as agent_module
 
+from a2a.utils.constants import AGENT_CARD_WELL_KNOWN_PATH
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -40,7 +42,8 @@ def wait_for_agents(agent_urls, timeout=45):
         for url in agent_urls:
             if url in ready_agents: continue
             try:
-                if requests.get(f"{url}/.well-known/agent.json", timeout=1).status_code == 200:
+                health_check_url = f"{url}{AGENT_CARD_WELL_KNOWN_PATH}"
+                if requests.get(health_check_url, timeout=1).status_code == 200:
                     logger.info(f"  ✅ Agent at {url} is ready.")
                     ready_agents.add(url)
             except requests.ConnectionError: pass
@@ -54,7 +57,6 @@ def wait_for_agents(agent_urls, timeout=45):
 def start_all_agents():
     """Start all support agents and the coordinator. This is the main entry point."""
     
-
     support_agents_to_start = {
         "Intake": (agent_module.create_intake_agent_server, 10020),
         "Resolution": (agent_module.create_resolution_agent_server, 10021),
@@ -64,9 +66,6 @@ def start_all_agents():
     support_agent_urls = [f"http://127.0.0.1:{port}" for _, port in support_agents_to_start.values()]
     wait_for_agents(support_agent_urls)
 
-    
-    for url in support_agent_urls:
-        agent_module.coordinator_a2a_client.add_remote_agent(url)
 
     agent_module.coordinator_agent = agent_module.create_coordinator_agent_with_registered_agents()
     threads["Coordinator"] = run_agent_in_background(agent_module.create_coordinator_agent_server, 10023, "Coordinator")
