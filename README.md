@@ -11,7 +11,7 @@ If you're looking to build some Production grade agents with Google ADK or other
 
 ## LLM Integration
 
-All demos in this repository are [![Nebius powered](https://img.shields.io/badge/Powered%20by-Nebius%20AI-orange?style=flat&labelColor=orange&color=green)](https://dub.sh/AIStudio) using open-source LLMs:
+All demos in this repository are [![Nebius powered](https://img.shields.io/badge/Powered%20by-Nebius%20Token%20Factory-orange?style=flat&labelColor=orange&color=green)](https://dub.sh/AIStudio) using open-source LLMs:
 
 
 - **Meta-Llama-3.1-8B-Instruct** - Used in most agent implementations
