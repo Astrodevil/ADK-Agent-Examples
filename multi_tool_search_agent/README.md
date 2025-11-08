@@ -43,7 +43,7 @@ adk web
 
 ## Required API Keys
 
-- [Nebius AI](https://dub.sh/AIStudio) - For LLM inference
+- [Nebius Token Factory](https://dub.sh/AIStudio) - For LLM inference
 - [Exa](https://exa.ai/) - For web search
 
 ## Key Features

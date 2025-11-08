@@ -6,7 +6,7 @@ Full explainer video is available on YouTube - [Analyzer Agent + ADK Intro](http
 
 This repository contains various agent demos built with Google's [ADK (Agent Development Kit)](https://google.github.io/adk-docs/), showcasing different patterns and capabilities for building AI agents. ADK is a flexible and modular framework that makes agent development feel more like software development. While optimized for Gemini and the Google ecosystem, it's model-agnostic, deployment-agnostic, and compatible with other frameworks. ADK enables developers to create, deploy, and orchestrate agentic architectures ranging from simple tasks to complex workflows, with features like multi-agent pipelines, tool integration, and sequential processing.
 
-If you're looking to build some Production grade agents with Google ADK or other frameworks, read this awesome guide by Nebius AI - [Agent 101: Launching production-grade agents at scale](https://nebius.com/blog/posts/launch-production-agents-at-scale)
+If you're looking to build some Production grade agents with Google ADK or other frameworks, read this awesome guide by Nebius Token Factory - [Agent 101: Launching production-grade agents at scale](https://nebius.com/blog/posts/launch-production-agents-at-scale)
 
 
 ## LLM Integration
@@ -98,7 +98,7 @@ You'll need to set up accounts and obtain API keys for:
 
 | Service | Purpose | Required For |
 |---------|---------|--------------|
-| [Nebius AI](https://dub.sh/AIStudio) | LLM inference | All agents |
+| [Nebius Token Factory](https://dub.sh/AIStudio) | LLM inference | All agents |
 | [Exa](https://exa.ai/) | Web search | Most agents |
 | [Tavily](https://tavily.com/) | Specialized search | Some agents |
 | [Firecrawl](https://firecrawl.dev/) | Web scraping | Analyzer agent |

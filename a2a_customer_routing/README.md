@@ -51,12 +51,12 @@ The system leverages the [A2A protocol](https://github.com/a2aproject/A2A) to en
 ### Google ADK (Agent Development Kit) Integration
 [Google's ADK](https://google.github.io/adk-docs/) is used to build the intelligent agents (Coordinator, Intake, and Escalation) in this system.
 
-### Nebius AI Studio
-[Nebius AI Studio](https://studio.nebius.com/) the underlying AI model infrastructure for all agents in the system
+### Nebius Token Factory Studio
+[Nebius Token Factory Studio](https://studio.nebius.com/) the underlying AI model infrastructure for all agents in the system
 - **Integration Methods**:
   - **ADK Pipeline**: Uses LiteLLM integration to connect Google ADK agents to Nebius models
   - **[LlamaIndex](https://www.llamaindex.ai/)  Pipeline**: Direct integration for knowledge base operations and semantic search capabilities
-- **Models Used via Nebius AI API**:
+- **Models Used via Nebius Token Factory API**:
   - **Llama 3.1 8B**: Powers the Coordinator, Intake, and Escalation agents for sentiment analysis and workflow orchestration
   - **Qwen/Qwen3-30B-A3B**: Handles knowledge base query resolution and complex question answering in the Resolution agent
   - **Qwen/Qwen3-Embedding-8B**: Generates semantic embeddings for document indexing and similarity search
@@ -66,7 +66,7 @@ The system leverages the [A2A protocol](https://github.com/a2aproject/A2A) to en
 ## Prerequisites
 
 - Python 3.8+
-- API access to Nebius AI models
+- API access to Nebius Token Factory models
 - Required Python packages (see requirements.txt)
 
 ## Project Structure
