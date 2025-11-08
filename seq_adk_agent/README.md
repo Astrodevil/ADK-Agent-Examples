@@ -45,7 +45,7 @@ adk web
 
 ## Required API Keys
 
-- [Nebius AI](https://dub.sh/AIStudio) - For LLM inference
+- [Nebius Token Factory](https://dub.sh/AIStudio) - For LLM inference
 - [Exa](https://exa.ai/) - For IPL news search
 - [Tavily](https://tavily.com/) - For AI news search
 
